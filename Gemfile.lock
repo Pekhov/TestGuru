@@ -60,6 +60,8 @@ GEM
     crass (1.0.4)
     erubi (1.7.1)
     execjs (2.7.0)
+    faker (1.9.1)
+      i18n (>= 0.7)
     ffi (1.9.25-java)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -160,6 +162,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-jdbcsqlite3-adapter
   coffee-rails (~> 4.2)
+  faker
   jbuilder (~> 2.5)
   jdbc-postgres
   pg_jruby
