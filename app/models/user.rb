@@ -1,6 +1,7 @@
 class User < ApplicationRecord
-  def history_by_level(level)
-    user_tests = UserHistory.where(user_id: self.id).pluck(:test_id)
-    Test.where(id: user_tests, level: level)
+  has_many :user_tests
+
+  def tests_by_level(level)
+    Test.joins(:user_tests).where(user_tests: {user_id: self.id}, tests: {level: level})
   end
 end

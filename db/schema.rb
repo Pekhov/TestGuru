@@ -47,14 +47,14 @@ ActiveRecord::Schema.define(version: 2018_10_31_122844) do
     t.index ["category_id"], name: "index_tests_on_category_id"
   end
 
-  create_table "user_histories", force: :cascade do |t|
+  create_table "user_tests", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "test_id"
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["test_id"], name: "index_user_histories_on_test_id"
-    t.index ["user_id"], name: "index_user_histories_on_user_id"
+    t.index ["test_id"], name: "index_user_tests_on_test_id"
+    t.index ["user_id"], name: "index_user_tests_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
