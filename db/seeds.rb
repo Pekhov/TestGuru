@@ -1,4 +1,5 @@
 require 'faker'
+
 users = []
 5.times do
   users << User.create(name: Faker::Name.name)
