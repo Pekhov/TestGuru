@@ -1,4 +1,5 @@
 require 'faker'
+
 users = []
 5.times do
   users << User.create(name: Faker::Name.name)
@@ -9,8 +10,8 @@ categories = []
   categories << Category.create(title: name)
 end
 tests = []
-tests << Test.create(title: "Быстрый тест на принадлежность к внедорожному стилю езды", level: 0, category: categories[0])
-tests << Test.create(title: "Тест на знание отличительных особенностей внедорожников", level: 1, category: categories[0])
+tests << Test.create(title: "Быстрый тест на принадлежность к внедорожному стилю езды", level: 0, category: categories[0], user_id: 1)
+tests << Test.create(title: "Тест на знание отличительных особенностей внедорожников", level: 1, category: categories[0], user_id: 1)
 tests.first.users.push(users.first)
 
 questions = []
