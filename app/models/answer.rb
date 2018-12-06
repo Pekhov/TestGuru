@@ -7,6 +7,6 @@ class Answer < ApplicationRecord
 
   def answers_limit
     err_msg = "Cannot add more then 4 answers"
-    errors.add(:question_id, err_msg) if question.answers.count > 4
+    errors.add(:question_id, err_msg) if question.answers.count >= 4
   end
 end
