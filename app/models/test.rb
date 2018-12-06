@@ -8,7 +8,12 @@ class Test < ApplicationRecord
   scope :simple, -> { by_level(0..1) }
   scope :middle, -> { by_level(2..4) }
   scope :hard, -> { by_level(5..Float::INFINITY) }
-  scope :tests_in_category, ->(category) { joins(:category).where(categories: {title: category}).order(id: :asc).pluck(:title) }
+  scope :tests_in_category, ->(category) { joins(:category).where(categories: {title: category}) }
   validates :title, presence: true, uniqueness: { scope: :level }
   validates :level, numericality: { only_integer: true, greater_than: 0 }
+  class << self
+    def test_list_in_category(category)
+      tests_in_category(category).order(id: :asc).pluck(:title)
+    end
+  end
 end
