@@ -16,17 +16,16 @@ class QuestionsController < ApplicationController
 
   def create
     question = @test.questions.create(question_params)
-    if question.errors.any?
-      render plain: question.errors
-    else
+    if question.save
       render plain: question.inspect
+    else
+      render plain: question.errors
     end
   end
 
   def destroy
     @question.destroy
-    @question = nil
-    render plain: "Destroy question with id=#{params[:id]}"
+    render plain: "Destroy question with id=#{@question.id}"
   end
 
   private
