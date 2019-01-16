@@ -1,0 +1,15 @@
+<h1>Question</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+  <tr>
+    <td><%= @question.body %></td>
+  </tr>
+</table>
+
+<p>
+  <%= link_to 'Edit', edit_test_question_path %>
+  <%= link_to 'Back', test_questions_path %>
+</p>

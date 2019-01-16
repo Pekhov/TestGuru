@@ -1,0 +1,20 @@
+<h1>Tests</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Questions count</th>
+  </tr>
+  <% @tests.each do |test| %>
+    <tr>
+      <td><%= test.title %></td>
+      <td><%= test.level %></td>
+      <td><%= test.questions.count %></td>
+    </tr>
+  <%	 end %>
+</table>
+
+<p>
+  <%= link_to 'New test', new_test_path %>
+</p>
