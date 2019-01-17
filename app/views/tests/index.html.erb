@@ -4,15 +4,16 @@
   <tr>
     <th>Title</th>
     <th>Level</th>
-    <th>Questions count</th>
+    <th colspan="2">Actions</th>
   </tr>
   <% @tests.each do |test| %>
     <tr>
       <td><%= test.title %></td>
       <td><%= test.level %></td>
-      <td><%= test.questions.count %></td>
+      <td><%= link_to 'Show', test_path(test) %></td>
+      <td><%= link_to "Show questions(#{test.questions.count})", test_questions_path(test) %></td>
     </tr>
-  <%	 end %>
+  <% end %>
 </table>
 
 <p>

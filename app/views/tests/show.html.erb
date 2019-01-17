@@ -10,3 +10,17 @@
       <td><%= @test.level %></td>
     </tr>
 </table>
+
+<h2>Test Questions</h2>
+<table>
+  <tr>
+    <th>Question body</th>
+  </tr>
+  <tr>
+    <td><%= render @test.questions %></td>
+  </tr>
+</table>
+
+<p>
+  <%= link_to 'Back', tests_path %>
+</p>

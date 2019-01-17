@@ -1,11 +1,10 @@
 module QuestionsHelper
 
-  def question_header(action, test)
-    case action
-    when 'edit'
-      "Edit #{test.title} Question"
-    when 'new'
-      "Create New #{test.title} Question"
+  def question_header
+    if @question.persisted?
+      "Edit #{@test.title} Question"
+    else
+      "Create New #{@test.title} Question"
     end
   end
 
@@ -14,7 +13,7 @@ module QuestionsHelper
   end
 
   def github_url(author, repo)
-    "<a href=\"https://github.com/#{author}/#{repo}\">#{repo}</a>".html_safe
+    link_to repo, "https://github.com/#{author}/#{repo}", target: '_blank'
   end
 
 end
