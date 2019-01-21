@@ -1,31 +1,40 @@
 class QuestionsController < ApplicationController
-  before_action :find_question, only: %i(show destroy)
-  before_action :find_test, only: %i(index create)
+  before_action :find_question, only: %i(show destroy edit update)
+  before_action :find_test, only: %i(index edit destroy)
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-    render plain: @test.questions.pluck(:body)
+  def show
   end
 
-  def show
-    render plain: @question.body
+  def edit
   end
 
   def new
+    @test = Test.find(params[:test_id])
+    @question = @test.questions.new
   end
 
   def create
-    question = @test.questions.create(question_params)
-    if question.save
-      render plain: question.inspect
+    @test = Test.find(params[:test_id])
+    @question = @test.questions.new(question_params)
+    if @question.save
+      redirect_to @question
     else
-      render plain: question.errors
+      render :new
+    end
+  end
+
+  def update
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render :new
     end
   end
 
   def destroy
     @question.destroy
-    render plain: "Destroy question with id=#{@question.id}"
+    redirect_to @question.test
   end
 
   private
@@ -39,7 +48,7 @@ class QuestionsController < ApplicationController
   end
 
   def find_test
-    @test = Test.find(params[:test_id])
+    @test = @question.test
   end
 
   def rescue_with_question_not_found

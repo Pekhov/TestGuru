@@ -1,0 +1,28 @@
+<h1>Test</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+  </tr>
+    <tr>
+      <td><%= @test.title %></td>
+      <td><%= @test.level %></td>
+    </tr>
+</table>
+
+<h2>Test Questions</h2>
+<table>
+  <tr>
+    <th>Question body</th>
+  </tr>
+  <tr>
+    <td><%= render @test.questions %></td>
+  </tr>
+</table>
+<p>
+  <%= link_to 'New Question', new_test_question_path(@test) %>
+</p>
+<p>
+  <%= link_to 'Back', tests_path %>
+</p>
