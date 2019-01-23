@@ -17,24 +17,19 @@ class AnswersController < ApplicationController
   # POST /answers
   # POST /answers.json
   def create
-    @answer = Answer.new(answer_params)
-
-    respond_to do |format|
-      if @answer.save
-        redirect_to @answer, notice: 'Answer was successfully created.'
-      else
-        render :new
-      end
+    @answer = @question.answers.new(answer_params)
+    if @answer.save
+      redirect_to @answer, notice: 'Answer was successfully created.'
+    else
+      render :new
     end
   end
 
   def update
-    respond_to do |format|
-      if @answer.update(answer_params)
-        redirect_to @answer, notice: 'Answer was successfully updated.'
-      else
-        render :edit
-      end
+    if @answer.update(answer_params)
+      redirect_to @answer, notice: 'Answer was successfully updated.'
+    else
+      render :edit
     end
   end
 
