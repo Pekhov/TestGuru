@@ -1,4 +1,11 @@
 <h1>Passing the <%= @tests_passages.test.title %></h1>
+
+<b>
+  <p>
+    Question №<%= @tests_passages.question_num %>/<%= @tests_passages.test.questions.count %>
+  </p>
+</b>
+
 <b>
   <%= @tests_passages.current_question.body %>
 </b>
@@ -10,5 +17,6 @@
       <%= b.label %>
     </p>
   <% end %>
+
   <p><%= form.submit 'Next' %></p>
 <% end %>
