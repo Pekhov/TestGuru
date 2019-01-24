@@ -1,4 +1,15 @@
 <h1>The <%= @tests_passages.test.title %> Test was Completed</h1>
-<%= show_result %>
+
+<% if @tests_passages.success? %>
+  <h2>Test passed!</h2>
+  <p>
+    Your result is <font color="green"><%=  @tests_passages.result %>%</font> of true answers
+  </p>
+<% else %>
+  <h2>Test was failed:(</h2>
+  <p>
+    Your result is <font color="red"><%=  @tests_passages.result %>%</font> of true answers
+  </p>
+<% end %>
 
 <%= link_to 'Back', tests_path %>
