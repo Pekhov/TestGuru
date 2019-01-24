@@ -1,15 +1,4 @@
 <h1>The <%= @tests_passages.test.title %> Test was Completed</h1>
-<% result = @tests_passages.percentage_of_correct_answers %>
-<% if result >= 85 %>
-  <h2>Test passed!</h2>
-  <p>
-    Your result is <font color="green"><%= result %>%</font> of true answers
-  </p>
-<% else %>
-  <h2>Test was failed:(</h2>
-  <p>
-    Your result is <font color="red"><%= result %>%</font> of true answers
-  </p>
-<% end %>
+<%= show_result %>
 
 <%= link_to 'Back', tests_path %>
