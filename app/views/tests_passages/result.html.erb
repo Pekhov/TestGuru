@@ -3,12 +3,12 @@
 <% if @tests_passages.success? %>
   <h2>Test passed!</h2>
   <p>
-    Your result is <font color="green"><%=  @tests_passages.result %>%</font> of true answers
+    Your result is <font color="green"><%=  @tests_passages.success_value %>%</font> of true answers
   </p>
 <% else %>
   <h2>Test was failed:(</h2>
   <p>
-    Your result is <font color="red"><%=  @tests_passages.result %>%</font> of true answers
+    Your result is <font color="red"><%=  @tests_passages.success_value %>%</font> of true answers
   </p>
 <% end %>
 

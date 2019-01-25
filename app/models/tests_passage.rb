@@ -6,9 +6,7 @@ class TestsPassage < ApplicationRecord
   before_validation :before_validation_set_first_question, on: :create
   before_validation :before_validation_set_next_question, on: :update
 
-  attr_reader :result
-
-  PASS_VALUE = 85.freeze
+  PASS_VALUE = 85
 
   def completed?
     current_question.nil?
@@ -22,8 +20,11 @@ class TestsPassage < ApplicationRecord
   end
 
   def success?
-    @result = correct_questions.to_f / test.questions.count.to_f * 100
-    @result >= PASS_VALUE
+    success_value >= PASS_VALUE
+  end
+
+  def success_value
+    correct_questions.to_f / test.questions.count.to_f * 100
   end
 
   def question_num
