@@ -1,0 +1,7 @@
+<div class="nav nav-admin">
+  <span class="nav-admin title">TestGuru Admin Panel</span>
+
+  <div class="nav-admin user">
+    Welcome, <b><%= current_user.name %></b> [<%= link_to 'Log Out', destroy_user_session_path, method: :delete %>]
+  </div>
+</div>
