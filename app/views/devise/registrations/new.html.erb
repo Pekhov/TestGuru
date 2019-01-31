@@ -9,6 +9,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -31,4 +36,4 @@
   </div>
 <% end %>
 
-<%= render "confirmations/shared/links" %>
+<%= render "devise/shared/links" %>

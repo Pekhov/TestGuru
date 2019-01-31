@@ -13,10 +13,7 @@
   <p>
     <%= form.label :category_id %><br>
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
-  </p><p>
-  <%= form.label :user_id %><br>
-  <%= form.collection_select :user_id, User.all, :id, :name, prompt: true %>
-</p>
+  </p>
 
   <p><%= form.submit %></p>
 <%  end %>

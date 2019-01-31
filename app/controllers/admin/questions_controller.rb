@@ -1,4 +1,5 @@
 class Admin::QuestionsController < Admin::BaseController
+
   before_action :find_question, only: %i(show destroy edit update)
   before_action :find_test, only: %i(index edit destroy)
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
@@ -26,7 +27,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def update
     if @question.update(question_params)
-      redirect_to @question
+      redirect_to admin_question_path(@question)
     else
       render :new
     end
