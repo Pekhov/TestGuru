@@ -1,8 +1,8 @@
-<h1>Passing the <%= @tests_passages.test.title %></h1>
+<h1><%= @tests_passages.test.title %></h1>
 
 <b>
   <p>
-    Question №<%= @tests_passages.question_num %>/<%= @tests_passages.test.questions.count %>
+    <%= t('.question') %> №<%= @tests_passages.question_num %>/<%= @tests_passages.test.questions.count %>
   </p>
 </b>
 
@@ -18,5 +18,5 @@
     </p>
   <% end %>
 
-  <p><%= form.submit 'Next' %></p>
+  <p><%= form.submit t('.next') %></p>
 <% end %>

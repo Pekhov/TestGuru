@@ -1,15 +1,15 @@
-<h1>The <%= @tests_passages.test.title %> Test was Completed</h1>
+<h1><%= t('.test_completed', test: @tests_passages.test.title) %> </h1>
 
 <% if @tests_passages.success? %>
-  <h2>Test passed!</h2>
+  <h2><%= t('.passed') %></h2>
   <p>
-    Your result is <font color="green"><%=  @tests_passages.success_value %>%</font> of true answers
+    <font color="green"><%= t('.result', result: @tests_passages.success_value) %></font>
   </p>
 <% else %>
-  <h2>Test was failed:(</h2>
+  <h2><%= t('.failed') %></h2>
   <p>
-    Your result is <font color="red"><%=  @tests_passages.success_value %>%</font> of true answers
+    <font color="red"><%= t('.result', result: @tests_passages.success_value) %></font>
   </p>
 <% end %>
 
-<%= link_to 'Back', tests_path %>
+<%= link_to t('.back'), tests_path %>

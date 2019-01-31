@@ -1,0 +1,103 @@
+ru:
+  tests:
+    test:
+      start: "Старт"
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      questions_number: "Количество вопросов"
+      action: "Действие"
+  author: "Алексей Пехов"
+  project: "Учебный проект в онлайн-школе Thinknetica"
+  admin:
+    tests:
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        questions_number: "Количество вопросов"
+        action: "Действия"
+        new: "Создать новый тест"
+      new:
+        back: "Назад"
+      test:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        are_you_sure: "Вы уверены?"
+      edit:
+        back: "Назад"
+      show:
+        test: "Тест: %{test}"
+        test_title: "Текст вопроса"
+        test_level: "Уровень"
+        question_body: "Текст вопроса"
+        test_questions: "Вопросы теста %{test}"
+        actions: "Действия"
+        new_question: "Новый вопрос"
+        edit: "Редактировать тест"
+        back: "Назад"
+    questions:
+      edit:
+        back: "Назад"
+      show:
+        edit: "Редактировать вопрос"
+        back: "Назад"
+        question: "Вопрос"
+      question:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        are_you_sure: "Вы уверены?"
+      new:
+        back: "Назад"
+    nav:
+      testguru_admin_panel: "Панель администратора ТестГуру"
+      log_out: "Выход"
+      welcome: "Добро пожаловать, %{name}"
+  tests_passages:
+    show:
+      question: "Вопрос"
+      next: "Следующий"
+    result:
+      test_completed: "Тест \"%{test}\" завершен!"
+      passed: "Тест пройден!"
+      failed: "Тест не пройден!"
+      result: "Ваш результат: %{result}% правильных ответов"
+      back: "Назад"
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      question:
+        create: "Создать вопрос"
+        update: "Редактировать вопрос"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+    select:
+      prompt: "Пожалуйста, выберите"
+  layouts:
+    admin:
+      admin_panel: "Панель администратора, ТестГуру"
+      project: "ТестГуру"
+    application:
+      testguru: "ТестГуру"
+      welcome: "Добро пожаловать, %{name}!"
+      log_in: "Войти"
+      log_out: "Выйти"
+      sign_up: "Заргистрироваться"
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+  create_new_test: "Создать новый тест"
+  edit_test: "Редактировать тест %{title}"
+  welcome: "Добро пожаловать, %{name}!"

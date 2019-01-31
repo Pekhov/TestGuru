@@ -1,8 +1,8 @@
-<h1>Question</h1>
+<h1><%= t('.question') %></h1>
 
 <table>
   <tr>
-    <th>Title</th>
+    <th><%= t('.question') %></th>
   </tr>
   <tr>
     <td><%= @question.body %></td>
@@ -18,6 +18,6 @@
 </ol>
 
 <p>
-  <%= link_to 'Edit', edit_admin_question_path %>
-  <%= link_to 'Back', admin_test_path(@question.test) %>
+  <%= link_to t('.edit'), edit_admin_question_path %>
+  <%= link_to t('.back'), admin_test_path(@question.test) %>
 </p>
