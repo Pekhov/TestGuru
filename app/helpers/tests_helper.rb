@@ -1,9 +1,9 @@
 module TestsHelper
   def test_header
     if @test.persisted?
-      "Edit #{@test.title}"
+      t('edit_test', title: @test.title)
     else
-      "Create New Test"
+      t('create_new_test')
     end
   end
 end
