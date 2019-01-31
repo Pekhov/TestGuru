@@ -32,6 +32,9 @@ gem 'devise'
 gem 'letter_opener', group: :development
 gem 'rails-i18n'
 
+gem 'bootstrap'
+gem 'jquery-rails'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
