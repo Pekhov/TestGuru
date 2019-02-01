@@ -54,6 +54,7 @@ ru:
         back: "Назад"
     nav:
       testguru_admin_panel: "Панель администратора ТестГуру"
+      testguru: "Test Guru"
       log_out: "Выход"
       welcome: "Добро пожаловать, %{name}"
   tests_passages:
@@ -92,6 +93,9 @@ ru:
       log_out: "Выйти"
       sign_up: "Заргистрироваться"
   shared:
+    nav:
+      testguru_admin_panel: "Панель администратора ТестГуру"
+      project: "ТестГуру"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
