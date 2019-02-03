@@ -67,6 +67,9 @@ ru:
       failed: "Тест не пройден!"
       result: "Ваш результат: %{result}% правильных ответов"
       back: "Назад"
+    gist:
+      success: "Gist успешно сохранен"
+      failure: "Во время сохранения Gist произошла ошибка"
   helpers:
     submit:
       test:

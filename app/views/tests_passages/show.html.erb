@@ -6,9 +6,9 @@
   </p>
 </b>
 
-<b>
+<p>
   <%= @tests_passages.current_question.body %>
-</b>
+</p>
 
 <%=  form_with url: tests_passage_path(@tests_passages), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @tests_passages.current_question.answers, :id, :body, include_hidden: false do |b| %>
@@ -17,6 +17,6 @@
       <%= b.label %>
     </p>
   <% end %>
-
+  <p><%= link_to 'Gist Question', gist_tests_passage_path(@tests_passages), method: :post %></p>
   <p><%= form.submit t('.next') %></p>
 <% end %>
