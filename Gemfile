@@ -34,6 +34,9 @@ gem 'rails-i18n'
 
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'faraday'
+gem 'spring', group: :development
+gem 'octokit'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

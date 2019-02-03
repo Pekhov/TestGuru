@@ -6,8 +6,8 @@ module ApplicationHelper
 
   def flash_messages
     flash.map do |type, message|
-      class_type = "flash #{ALERT_TYPES[type.to_sym]}"
-      content_tag :div, message, class: class_type
+      class_type = "alert alert-#{ALERT_TYPES[type.to_sym]}"
+      content_tag :div, message, class: class_type, role: 'alert'
     end.join("\n").html_safe
   end
 end

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= t('.admin_panel') %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
@@ -10,10 +12,13 @@
 </head>
 
 <body>
-<p><b><%= link_to t('.project'), root_path %></b></p>
+
 <%= render 'admin/nav' %>
-<%= flash_messages %>
-<%= yield %>
-<%= render 'shared/footer' %>
+
+<div class="container">
+  <%= flash_messages %>
+  <%= yield %>
+  <%= render 'shared/footer' %>
+</div>
 </body>
 </html>
