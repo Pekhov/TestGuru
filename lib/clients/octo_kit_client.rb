@@ -8,6 +8,10 @@ class OctoKitClient
     @octokit_client.create_gist(params)
   end
 
+  def success?
+    @octokit_client.last_response.status == 201
+  end
+
   private
 
   def setup_client

@@ -21,8 +21,9 @@ class TestsPassagesController < ApplicationController
   end
 
   def gist
-    answer = GistQuestionService.new(@tests_passages.current_question, OctoKitClient.new).call
-    flash_options = if answer
+    service = GistQuestionService.new(@tests_passages.current_question, OctoKitClient.new)
+    answer = service.call
+    flash_options = if service.client.success?
                       create_gist!(answer.html_url)
                       { notice: t('.success', gist_url: answer[:html_url]) }
                     else
@@ -38,6 +39,6 @@ class TestsPassagesController < ApplicationController
   end
 
   def create_gist!(gist_url)
-    current_user.gists.create(question: @tests_passages.current_question, url: gist_url)
+    current_user.gists.create!(question: @tests_passages.current_question, url: gist_url)
   end
 end
