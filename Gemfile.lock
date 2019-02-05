@@ -117,6 +117,11 @@ GEM
     multipart-post (2.0.0)
     nio4r (2.3.1-java)
     nokogiri (1.10.1-java)
+    octicons (8.3.0)
+      nokogiri (>= 1.6.3.1)
+    octicons_helper (8.3.0)
+      octicons (= 8.3.0)
+      rails
     octokit (4.13.0)
       sawyer (~> 0.8.0, >= 0.5.3)
     orm_adapter (0.5.0)
@@ -221,6 +226,7 @@ DEPENDENCIES
   jdbc-postgres
   jquery-rails
   letter_opener
+  octicons_helper
   octokit (~> 4.2)
   pg_jruby
   puma (~> 3.11)
