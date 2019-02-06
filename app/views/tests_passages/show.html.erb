@@ -1,5 +1,5 @@
 <h1><%= @tests_passages.test.title %></h1>
-
+<progress value=0 max=100 id="progress" data-progress-percent=<%= progress_result %>></progress>
 <b>
   <p>
     <%= t('.question') %> №<%= @tests_passages.question_num %>/<%= @tests_passages.test.questions.count %>
