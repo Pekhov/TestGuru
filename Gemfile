@@ -39,6 +39,7 @@ gem 'jquery-rails'
 # gem 'faraday'
 gem 'spring', group: :development
 gem 'octokit', "~> 4.2"
+gem 'octicons_helper'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
