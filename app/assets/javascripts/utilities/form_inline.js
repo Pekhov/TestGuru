@@ -40,7 +40,7 @@ function formInLineHandler(testId) {
     $formInLine.toggle()
     $testTitle.toggle()
     console.log($formInLine)
-    if (!$formInLine.length == 0) {
+    if (!$formInLine.length) {
         if ($formInLine.is(':visible')) {
             link.textContent = 'Cancel'
         } else {
