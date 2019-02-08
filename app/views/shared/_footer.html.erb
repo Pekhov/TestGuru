@@ -1,1 +1,5 @@
-<p><%= current_year %> <%= t('author') %> <%= github_url("Pekhov", "TestGuru") %> - Прохождение тестов. <%= link_to t('project'), 'http://thinknetica.com', target: '_blank' %><%= link_to I18n.t('.feedback'), new_feedback_path%></p>
+<p>
+  <%= current_year %> <%= t('author') %> <%= github_url("Pekhov", "TestGuru") %> - Прохождение тестов.
+  <%= link_to t('project'), 'http://thinknetica.com', target: '_blank' %>
+  <%= link_to I18n.t('.feedback'), new_feedback_path%>
+</p>
