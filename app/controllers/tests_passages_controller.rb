@@ -1,3 +1,5 @@
+require 'lib/clients/octo_kit_client'
+
 class TestsPassagesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_tests_passage, only: %i[show update result gist]
