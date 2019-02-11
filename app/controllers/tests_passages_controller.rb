@@ -1,4 +1,4 @@
-require 'lib/clients/octo_kit_client'
+require "#{Rails.root}/lib/clients/octo_kit_client"
 
 class TestsPassagesController < ApplicationController
   before_action :authenticate_user!
