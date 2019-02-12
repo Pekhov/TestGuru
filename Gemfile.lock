@@ -57,6 +57,8 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
+    bootstrap_form (4.1.0)
+      rails (>= 5.0)
     builder (3.2.3)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -218,6 +220,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-jdbcsqlite3-adapter
   bootstrap (~> 4.0.0.beta3)
+  bootstrap_form
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
