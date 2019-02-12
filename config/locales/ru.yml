@@ -61,6 +61,16 @@ ru:
         question: "Вопрос"
         url: "Ссылка"
         user: "Пользователь"
+    feedbacks:
+      index:
+        header: "Отзывы"
+        feedback: "Отзыв"
+        user: "Пользователь"
+        back: "Назад"
+        action: "Действие"
+      feedback:
+        are_you_sure: "Вы уверены?"
+        delete: "Удалить"
     nav:
       testguru_admin_panel: "Панель администратора ТестГуру"
       testguru: "Test Guru"
@@ -117,3 +127,15 @@ ru:
   create_new_test: "Создать новый тест"
   edit_test: "Редактировать тест %{title}"
   welcome: "Добро пожаловать, %{name}!"
+  feedback: "Отправить отзыв"
+  feedbacks:
+    new:
+      feedback: "Новый отзыв"
+      back: "Назад"
+    form:
+      create_feedback: "Создать отзыв"
+    create:
+      feedback_was_created: "Отзыв был успешно создан"
+    show:
+      body: "Отзыв"
+      root_path: "Главная страница"

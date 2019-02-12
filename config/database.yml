@@ -27,7 +27,6 @@ default: &default
   adapter: postgresql
   encoding: UTF-8
   pool: 5
-  timeout: 5000
   username: postgres
   password: waaaaa
 

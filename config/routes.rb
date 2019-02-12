@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'sessions/new'
   root 'tests#index'
 
+  resources :feedbacks, only: %i[show new create]
+
   resources :tests, only: :index do
     member do
       post :start
@@ -25,5 +27,6 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, shallow: true, only: :index
+    resources :feedbacks, only: %i[index destroy]
   end
 end
