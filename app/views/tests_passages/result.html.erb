@@ -1,4 +1,5 @@
 <h1><%= t('.test_completed', test: @tests_passages.test.title) %> </h1>
+<%= t('test_status.result.time_failed') if @tests_passages.time_out? %>
 
 <% if @tests_passages.success? %>
   <h2><%= t('.passed') %></h2>

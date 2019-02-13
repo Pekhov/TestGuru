@@ -3,6 +3,7 @@ require "#{Rails.root}/lib/clients/octo_kit_client"
 class TestsPassagesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_tests_passage, only: %i[show update result gist]
+  before_action :check_passing_time, only: :update
 
   def show
 
@@ -49,5 +50,11 @@ class TestsPassagesController < ApplicationController
     badge_service = BadgeService.new(@tests_passages)
     badge_service.awarded_badges!
     current_user.badges.push(badge_service.badges)
+  end
+
+  def check_passing_time
+    return unless @tests_passages.time_out?
+
+    redirect_to result_tests_passage_path(@tests_passages)
   end
 end
