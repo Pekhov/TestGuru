@@ -1,0 +1,11 @@
+ru:
+  activerecord:
+    models:
+      badge: "Награда"
+    attributes:
+      badge:
+        title: "Название"
+        image_path: "Картинка"
+        assigment_rule: "Правило награждения"
+        level: "Уровень"
+        category: "Категория"

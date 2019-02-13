@@ -10,6 +10,30 @@ ru:
       action: "Действие"
   author: "Алексей Пехов"
   project: "Учебный проект в онлайн-школе Thinknetica"
+  badges:
+    index:
+      header: "Доступные награды"
+      title: "Название"
+      image_path: "Иконка"
+      assigment_rule: "Правило награждения"
+      actions: "Действия"
+      new_badge: "Новая награда"
+    show:
+      title: "Награда %{badge_title}"
+      assigment_rule: "Правило награждения"
+      edit: "Редактировать"
+      back: "Назад"
+    new:
+      header: "Добавление награды"
+      back: "Назад"
+    edit:
+      header: "Редактировать %{title}"
+      back: "Назад"
+    badge:
+      show: "Посмотреть"
+      edit: "Редактировать"
+      delete: "Удалить"
+      delete_confirmation: "Вы уверены?"
   admin:
     tests:
       index:
@@ -104,6 +128,9 @@ ru:
         category_id: "Категория"
     select:
       prompt: "Пожалуйста, выберите"
+    badge:
+      create: "Добавить награду"
+      update: "Обновить нагруду"
   layouts:
     admin:
       admin_panel: "Панель администратора, ТестГуру"

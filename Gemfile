@@ -40,6 +40,7 @@ gem 'jquery-rails'
 gem 'spring', group: :development
 gem 'octokit', "~> 4.2"
 gem 'octicons_helper'
+gem "bootstrap_form"
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

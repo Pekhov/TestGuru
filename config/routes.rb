@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'tests#index'
 
   resources :feedbacks, only: %i[show new create]
+  resources :badges, only: :index
 
   resources :tests, only: :index do
     member do
@@ -28,5 +29,6 @@ Rails.application.routes.draw do
     end
     resources :gists, shallow: true, only: :index
     resources :feedbacks, only: %i[index destroy]
+    resources :badges
   end
 end

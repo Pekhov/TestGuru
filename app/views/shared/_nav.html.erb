@@ -2,6 +2,7 @@
   <%= link_to t('.project'), root_path, class: 'navbar-brand' %>
   <% if user_signed_in? && current_user.admin?%>
     <%= link_to t('.testguru_admin_panel'), admin_tests_path, class: 'navbar-brand' %>
+    <%= link_to t('.badges'), badges_path, class: 'nav-item nav-link' %>
   <% end %>
 
   <span class="navbar-text">
