@@ -13,6 +13,11 @@ class Test < ApplicationRecord
   scope :tests_in_category, ->(category) { joins(:category).where(categories: {title: category}) }
   validates :title, presence: true, uniqueness: { scope: :level }
   validates :level, numericality: { only_integer: true, greater_than: 0 }
+  validates :time_limit, numericality: {
+    only_integer: true,
+    greater_than_or_equal_to: 1,
+    allow_blank: true
+  }
   class << self
     def test_list_in_category(category)
       tests_in_category(category).order(id: :asc).pluck(:title)

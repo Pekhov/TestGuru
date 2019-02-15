@@ -2,12 +2,15 @@ ru:
   tests:
     test:
       start: "Старт"
+      time_limit: "%{time} мин"
+      time_unlimit: "Не ограничено"
     index:
       header: "Доступные тесты"
       title: "Название"
       level: "Уровень"
       questions_number: "Количество вопросов"
       action: "Действие"
+      time_limit: "Отведенное время"
   author: "Алексей Пехов"
   project: "Учебный проект в онлайн-школе Thinknetica"
   badges:
@@ -43,12 +46,15 @@ ru:
         questions_number: "Количество вопросов"
         action: "Действия"
         new: "Создать новый тест"
+        time_limit: "Отведенное время"
       new:
         back: "Назад"
       test:
         show: "Показать"
         edit: "Редактировать"
         delete: "Удалить"
+        time_limit: "%{time} мин"
+        time_unlimit: "Не ограничено"
         are_you_sure: "Вы уверены?"
       edit:
         back: "Назад"

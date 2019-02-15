@@ -10,6 +10,10 @@
     <%= form.label :level %><br>
     <%= form.number_field :level, id: :test_level, class: 'form-control' %>
   </p>
+    <p>
+      <%= form.label :time_limit %><br>
+      <%= form.number_field :time_limit, id: :test_timer, class: "form-conrtrol" %>
+    </p>
   <p>
     <%= form.label :category_id %><br>
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true, class: 'form-control' %>
